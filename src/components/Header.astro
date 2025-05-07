@@ -5,16 +5,36 @@ import { SITE_TITLE } from "../consts";
 
 <header>
   <div class="border-b border-gray-200">
-    <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-      <div class="flex flex-row items-center justify-center">
-        <a href="/" class="flex items-center justify-center space-x-2">
-          <img src="/win98icon/write_yellow-1.png" class="w-8 h-8" />
-          <h2>{SITE_TITLE}</h2>
+    <nav class="-mb-px flex" aria-label="Tabs">
+      <!-- HOME BUTTON -->
+      <div class="flex flex-row items-center w-96">
+        <a
+          href="/"
+          class="flex items-center justify-center space-x-2 title-container"
+        >
+          <img src="/win98icon/entire_network_globe-5.png" class="w-8 h-8" />
+          <h2
+            class:list={[
+              "font-mono text-sm italic transition-color",
+              "text-gray-600 hover:text-gray-800",
+              "dark:text-gray-200 dark:hover:text-gray-50",
+            ]}
+          >
+            <span
+              >{
+                SITE_TITLE.split("").map((char, i) => (
+                  <span data-index={i}>{char}</span>
+                ))
+              }</span
+            >
+          </h2>
         </a>
       </div>
 
-      <HeaderLink href="/">Blog</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
+      <div class="flex-1 flex">
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/about">About</HeaderLink>
+      </div>
     </nav>
   </div>
 </header>
