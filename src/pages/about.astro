@@ -1,62 +1,181 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Prose from "../components/Prose.astro";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="container">
+    <Header />
+    <main class="content">
+      <section>
+        <Prose>
+          <h2>Hello, world</h2>
+          <img
+            src="/me.png"
+            alt="A picture of Cory"
+            class="rounded-lg shadow-lg w-24"
+          />
+          <p>
+            This is a picture of me, which proves that I am human, and not a
+            robot. Yep, it is for certain that I am not a robot. I am 99% sure
+            that this is true. Never mind that 1% of uncertainty, life is hard
+            enough as it is, take a load off and just trust me on this one.
+          </p>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+          <h2 class="clear-none">About me (a human)</h2>
+          <p>
+            I grew up in central California. San Juan Bautista, to be precise.
+            Hitchcock's Vertigo was shot there, which is pretty cool.
+          </p>
+          <p>
+            My family descends from the Donner Party, so you better take me
+            seriously if I say that I am hungry.
+          </p>
+          <p>
+            I tried doing standup comedy once. I honestly have no idea what I
+            said on that stage, but I was told it was funny. I will never do it
+            again.
+          </p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+          <h2>Discovering the web as a career</h2>
+          <p>
+            In 2010, I moved to San Francisco with dreams of working in the
+            video game industry. After bombing an interview with Double Fine for
+            an IT internship, I started looking around for other "computer
+            things" that I could throw myself into.
+          </p>
+          <p>
+            Armed with a High School diploma, three years of Computer Science
+            undergraduate work, and my most technical past job being "call
+            center representative", I was off. Failure was not an option.
+          </p>
+          <p>
+            Naturally, I replied to one of those "seeking rockstar programmer"
+            ads on craigslist. Probably a scam, but I didn't care. I show up,
+            and the guys tell me about their scam. They shit out garbage
+            Facebook quizzes, and it somehow makes them money. I am fascinated.
+          </p>
+          <p>I take the gig, which pays a $20 daily lunch stipend. Nice.</p>
+          <p>
+            Turns out the Facebook quizzes/scams were part of the plan to fund a
+            real business venture-- a domain registrar. It was sold to me as
+            "basically I want to say fuck you to GoDaddy" which of course I
+            loved, being a twenty-something with an attitude and something to
+            prove.
+          </p>
+          <p>
+            I made a DNS server with this weird new thing called NodeJS. I made
+            a Ruby gem to interface with Domain Registry APIs. I typed in "rails
+            new ..." and pushed a bunch of garbage "lol it works now" commits.
+            Profane comments peppered the glorious heaps of my code.
+          </p>
+          <p>
+            I was in love with this weird internet work. I went to parties. I
+            pretended to know what other smart people said. I gave talks about
+            things I barely understood. I had the room to go ALL IN on this, and
+            I regret absolutely nothing
+          </p>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+          <h2>The rest of the owl</h2>
+          <p>And so, a career is born.</p>
+          <p>
+            Badger (the domain registrar) fails in a year, pivoting to
+            BountySource, some idea the founder had in college that he thought
+            was cool too.
+          </p>
+          <p>
+            BountySource snipes one of the founder's old friends, JG, away from
+            his swank job at New Relic with promises of wealth and grandeur.
+            Company dies a few months after that, so JG takes me with him back
+            to New Relic.
+          </p>
+          <p>
+            I grew sick of doing garbage ETL work at New Relic instead of the
+            cool product work that the people up in Portland did, so I left to
+            join a little startup called Groove.
+          </p>
+          <p>
+            I'm loving building everything myself again, and the scrappy startup
+            life, especially now that I had seen it before. I get to "use what I
+            have learned" in a big way for the first time. But alas, one can
+            only build sales software for sales people to sell sales for so
+            long.
+          </p>
+          <p>
+            I leave Groove to join another tiny startup, Smash.gg, because... I
+            like to play video games? It was PHP, and bad PHP at that (like, no
+            framework bad), but you know what, I had a shit load of fun. It was
+            the first time I stepped away from Rails, which was scary, but that
+            really did codify in me the value of frameworks, and that building
+            your own shitty version of some parts of a framework is a terrible,
+            awful idea.
+          </p>
+          <p>
+            Smash.gg burns through all of its investment cash and fires a bunch
+            of people, including me. I go back to Groove.
+          </p>
+          <p>
+            I have the title "Senior Software Engineer" for the first time,
+            which feels nifty. This about where I start to feel confident in my
+            career. I do some Pretty Good Work, I think I only over-engineered
+            one thing to the point of it becoming one of those "just don't touch
+            it" things.
+          </p>
+          <p>
+            Covid happens. Paying $X,XXX a month to live in San Francisco starts
+            to feel really dumb, so my partner and I find a place in Denver,
+            Colorado. I use this as an excuse to leave Groove, wanting to get a
+            local job when I land in Denver. New place to live, new job to work,
+            new me to definitely be a human, yep.
+          </p>
+          <p>
+            I get here and find a cool company called CirrusMD who offers me a
+            job. Great people, the product isn't evil (health care chat), I
+            really liked it. Then they ran out of money and fired a bunch of
+            people. I wasn't fired, but my whole team was, so, I (reluctantly,
+            this time) submit my resignation.
+          </p>
+          <p>
+            Denver is a tiny tech scene, so I follow some of the fired people to
+            Brandfolder, who literally worked across the street from CirrusMD.
+          </p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+          <h2>So now we are here</h2>
+          <p>
+            I feel really secure in my work at Brandfolder. I am battle tested.
+            I know when I am correct, and I know when I am incorrect. When I am
+            incorrect, I quickly learn myself back up.
+          </p>
+          <p>
+            Brandfolder had already been acquired by Smartsheet by the time I
+            joined, but about 1.5 years into my time there, the complete
+            assimilation happened.
+          </p>
+          <p>
+            But, I was ready for it. My whole whacky career prepared me for the
+            moment.
+          </p>
+          <p>
+            Suddenly I am building microservices with Go. I am quick to find
+            both the similarities and differences between Go and other languages
+            I had used. It's a beautiful blend of not-too-much code, and
+            not-too-much infrastructure. I think I was only ever paged once for
+            that system, and it was a trivial solve.
+          </p>
+          <p>
+            Now I am writing Java. I don't like Java, and I know specifically
+            the things that I do not like about Java, but hey, it's just code
+            with a funny accent that you get used too after a few days.
+          </p>
+        </Prose>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
