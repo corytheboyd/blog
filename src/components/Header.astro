@@ -7,10 +7,11 @@ import { SITE_TITLE } from "../consts";
   <div class="border-b border-gray-200">
     <nav class="-mb-px flex" aria-label="Tabs">
       <!-- HOME BUTTON -->
-      <div class="flex flex-row items-center w-96">
+      <div class="flex-grow flex flex-row items-center">
         <a
           href="/"
-          class="flex items-center justify-center space-x-2 title-container"
+          class="flex items-center justify-center space-x-2 title-container h-full"
+          data-home-button
         >
           <img src="/win98icon/entire_network_globe-5.png" class="w-8 h-8" />
           <h2
@@ -23,7 +24,9 @@ import { SITE_TITLE } from "../consts";
             <span
               >{
                 SITE_TITLE.split("").map((char, i) => (
-                  <span data-index={i}>{char}</span>
+                  <span data-index={i} class="inline-block">
+                    {char}
+                  </span>
                 ))
               }</span
             >
@@ -31,10 +34,82 @@ import { SITE_TITLE } from "../consts";
         </a>
       </div>
 
-      <div class="flex-1 flex">
+      <div class="flex">
         <HeaderLink href="/blog">Blog</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
       </div>
     </nav>
   </div>
 </header>
+
+<style>
+  :root {
+    --letter-animation-duration: 0.6s;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .letter-bounce {
+    animation: bounce var(--letter-animation-duration)
+      cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: both;
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll("[data-home-button]");
+  buttons.forEach((button) => {
+    let hasEntered = false;
+    let hasLeft = false;
+    let animationTimeouts: NodeJS.Timeout[] = [];
+
+    function clearAllTimeouts() {
+      animationTimeouts.forEach(timeout => clearTimeout(timeout));
+      animationTimeouts = [];
+    }
+
+    function startAnimation() {
+      const letters = button.querySelectorAll<HTMLElement>("[data-index]");
+      letters.forEach((letter, index) => {
+        const timeout = setTimeout(() => {
+          letter.style.animation = 'none';
+          letter.offsetHeight; // Trigger reflow
+          letter.style.animation = `bounce var(--letter-animation-duration) cubic-bezier(0.4, 0, 0.2, 1)`;
+        }, index * 50);
+        animationTimeouts.push(timeout);
+      });
+    }
+
+    function stopAnimation() {
+      const letters = button.querySelectorAll<HTMLElement>("[data-index]");
+      letters.forEach(letter => {
+        letter.style.animation = 'none';
+      });
+      clearAllTimeouts();
+    }
+
+    button.addEventListener("mouseenter", (e) => {
+      if (!hasEntered) {
+        hasEntered = true;
+        hasLeft = false;
+        startAnimation();
+      }
+    });
+
+    button.addEventListener("mouseleave", (e) => {
+      if (!hasLeft) {
+        hasLeft = true;
+        hasEntered = false;
+        stopAnimation();
+      }
+    });
+  });
+</script>
