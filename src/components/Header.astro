@@ -27,8 +27,9 @@ import { SITE_TITLE } from "../consts";
             <span
               >{
                 SITE_TITLE.split("").map((char, i) => (
-                  <span data-index={i} class="inline-block">
-                    {char}
+                  <span data-index={i} class="letter-wrapper inline-block relative">
+                    <span class="letter-shadow absolute left-0 top-0 pointer-events-none select-none">{char}</span>
+                    <span class="letter relative z-10">{char}</span>
                   </span>
                 ))
               }</span
@@ -47,7 +48,7 @@ import { SITE_TITLE } from "../consts";
 
 <style>
   :root {
-    --letter-animation-duration: 0.3s;
+    --letter-animation-duration: 0.45s;
     --letter-animation-delay: 20ms;
     --letter-bounce-height: -5px;
     --letter-animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,9 +58,11 @@ import { SITE_TITLE } from "../consts";
     0%,
     100% {
       transform: translateY(0);
+      text-shadow: 0 0px 0 rgba(0,0,0,0.15);
     }
     50% {
       transform: translateY(var(--letter-bounce-height));
+      text-shadow: 0 14px 24px 4px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.25);
     }
   }
 
@@ -67,6 +70,32 @@ import { SITE_TITLE } from "../consts";
     animation: bounce var(--letter-animation-duration)
       var(--letter-animation-timing);
     animation-fill-mode: both;
+    display: inline-block;
+  }
+
+  .letter-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .letter-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(0,0,0,0.5);
+    filter: blur(2px);
+    transform: translateY(12px) scaleY(0.7);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    transition: transform var(--letter-animation-duration), opacity var(--letter-animation-duration);
+  }
+  .letter-bounce .letter-shadow {
+    transform: translateY(20px) scaleY(0.9);
+    opacity: 0.9;
+  }
+  .letter {
+    position: relative;
+    z-index: 1;
   }
 
   .home-icon-glow {
@@ -93,13 +122,13 @@ import { SITE_TITLE } from "../consts";
     }
 
     function startAnimation() {
-      const letters = button.querySelectorAll<HTMLElement>("[data-index]");
-      letters.forEach((letter, index) => {
+      const wrappers = button.querySelectorAll<HTMLElement>("[data-index]");
+      wrappers.forEach((wrapper, index) => {
         const timeout = setTimeout(
           () => {
-            letter.style.animation = "none";
-            letter.offsetHeight; // Trigger reflow
-            letter.style.animation = `bounce var(--letter-animation-duration) var(--letter-animation-timing)`;
+            wrapper.style.animation = "none";
+            wrapper.offsetHeight; // Trigger reflow
+            wrapper.style.animation = `bounce var(--letter-animation-duration) var(--letter-animation-timing)`;
           },
           index *
             parseInt(
@@ -113,9 +142,9 @@ import { SITE_TITLE } from "../consts";
     }
 
     function stopAnimation() {
-      const letters = button.querySelectorAll<HTMLElement>("[data-index]");
-      letters.forEach((letter) => {
-        letter.style.animation = "none";
+      const wrappers = button.querySelectorAll<HTMLElement>("[data-index]");
+      wrappers.forEach((wrapper) => {
+        wrapper.style.animation = "none";
       });
       clearAllTimeouts();
     }
