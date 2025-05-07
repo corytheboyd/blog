@@ -102,10 +102,7 @@ import { SITE_TITLE } from "../consts";
 <script>
   const buttons = document.querySelectorAll("[data-home-button]");
   buttons.forEach((button) => {
-    let hasEntered = false;
-    let hasLeft = false;
     let animationTimeouts: NodeJS.Timeout[] = [];
-    let hasAnimatedOnLoad = false;
 
     function clearAllTimeouts() {
       animationTimeouts.forEach((timeout) => clearTimeout(timeout));
@@ -132,37 +129,9 @@ import { SITE_TITLE } from "../consts";
       });
     }
 
-    function stopAnimation() {
-      const wrappers = button.querySelectorAll<HTMLElement>("[data-index]");
-      wrappers.forEach((wrapper) => {
-        wrapper.style.animation = "none";
-      });
-      clearAllTimeouts();
-    }
-
-    // Trigger animation on page load
-    if (!hasAnimatedOnLoad) {
-      hasAnimatedOnLoad = true;
-      // Small delay to ensure DOM is ready
-      setTimeout(() => {
-        startAnimation();
-      }, 100);
-    }
-
-    button.addEventListener("mouseenter", (e) => {
-      if (!hasEntered) {
-        hasEntered = true;
-        hasLeft = false;
-        startAnimation();
-      }
-    });
-
-    button.addEventListener("mouseleave", (e) => {
-      if (!hasLeft) {
-        hasLeft = true;
-        hasEntered = false;
-        stopAnimation();
-      }
-    });
+    // Only animate on page load
+    setTimeout(() => {
+      startAnimation();
+    }, 100);
   });
 </script>
