@@ -16,7 +16,6 @@ So now you know, this is what I feel like adding Content to the Internet. Yet an
 
 This is what you deserve. This is what I deserve. 
 
-Let us synchronize our depressions into a fucked up double helix of shareholder value, rocketing toward the sun. If we're lucky, we'll burn up and die sans drama, otherwise, I guess we'll pick up our bootstraps some more and try harder next fiscal year.
+Let us synchronize our depressions into a fucked up double helix of shareholder value, rocketing toward the sun. If we're lucky, we'll burn up and die, whimpering. If not that, well, I guess we can put our pants back on and try harder next fiscal year.
 
-Are we having fun yet?!
-
+Hooray!
