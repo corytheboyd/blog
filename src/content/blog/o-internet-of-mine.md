@@ -1,7 +1,7 @@
 ---
 title: "O Internet of Mine"
 description: "I hate you; I love you"
-pubDate: "2025-04-11"
+pubDate: "2025-05-11"
 ---
 
 It's really hard to write stuff and publish it. Not hard to do, but...
