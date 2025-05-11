@@ -4,7 +4,7 @@ description: "I hate you; I love you"
 pubDate: "2025-05-11"
 ---
 
-It's really hard to write stuff and publish it. I mean not technically, in that ergard it's just editing a markdown file for Cloudflare to `npm fuck -it` to, but...
+It's really hard to write stuff and publish it. I mean, not technically, in that regard it's just editing a markdown file for Cloudflare to `npm fuck -it` to, but...
 
 I cannot turn off that little voice that tells me I have nothing new to say, that I have no new perspectives to animate with douchey faux thought leadership drivel. I have no cute headlines to bait links with, nor the wherewithall to stoop to that level of completely bankrupt crap craftery.
 
