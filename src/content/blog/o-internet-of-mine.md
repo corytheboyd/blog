@@ -16,7 +16,7 @@ So now you know, this is what I feel like adding Content to the Internet. Yet an
 
 This is what you deserve. This is what I deserve. 
 
-Let us synchronize our depression into a double helix of distorted shareholder value, rocketing toward the sun. If we're lucky, we'll burn up and die. If we're not lucky, we will put our pants back on and try harder again harder next fiscal year.
+Let us synchronize our depression into a double helix of shareholder value, rocketing toward the sun. If we're lucky, we'll burn up and die. If we're not lucky, we will put our pants back on and try harder again harder next fiscal year.
 
 Your brother in business,
 Cory.
