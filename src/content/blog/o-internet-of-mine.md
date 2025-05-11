@@ -10,7 +10,7 @@ I cannot turn off that little voice that tells me I have nothing new to say, tha
 
 None-the-fucking-less, other people squat down to force their shit out directly into the fan. How am I supposed to go to lunch on Monday with Hank when we ALLLLL saw the abosolute dumpster fire of filth he left on LinedIn. Motherfucker backed that shit up into the lot like a Dodge Ram 3500 at Bass Pro Shops. And the article was... some shit about "Return to Office Is Good For Autonomy and Business." Shut the FUCK up, Hank.
 
-So anyway. Fuck it. What MORE harm can I possibly do by shitting my own awful trash into the internet. Maybe MY shit will become THE shit... hahahahaha. Maybe my shit will like, land on top of some other shit and loosten it up, making it easier to scrape it all off later.
+So anyway. Fuck it. What more harm could I possibly do by shitting my own awful trash into the internet. Maybe _my_ shit will like, land on top of some other shit and loosten it up, making it easier to scrape it all off later.
 
 So now you know, this is what I feel like adding Content to the Internet. Yet another defacation sprinkler, blasting fecal matter onto the wall.
 
