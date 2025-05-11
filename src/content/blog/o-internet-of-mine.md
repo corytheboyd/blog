@@ -8,7 +8,7 @@ It's really hard to write stuff and publish it. I mean, not technically, in that
 
 I cannot turn off that little voice that tells me I have nothing new to say, that I have no new perspectives to animate with douchey faux thought leadership drivel. I have no cute headlines to bait links with, nor the wherewithall to stoop to that level of completely bankrupt crap craftery.
 
-None-the-fucking-less, other people squat down to force their shit out directly into the fan. How am I supposed to go to lunch on Monday with Hank when we ALLLLL saw the abosolute dumpster fire of filth he left on LinedIn. Motherfucker backed that Dodge Ram 3500 full of shit into the Bass Pro Shops lot and just left it there for us to... read? Learn from?! God, please end my suffering.
+None-the-fucking-less, other people squat down to force their shit out directly into the fan. How am I supposed to go to lunch on Monday with Hank when we ALLLLL saw the abosolute dumpster fire of filth he left on LinedIn. Motherfucker backed that Dodge Ram 3500 full of shit into the Bass Pro Shops lot and just left it there for us to... read? God, please end my suffering.
 
 So anyway. Fuck it. What more harm could I possibly do by shitting my own awful trash into the internet. Maybe _my_ shit will like, land on top of some other shit and loosten it up, making it easier to scrape it all off later.
 
