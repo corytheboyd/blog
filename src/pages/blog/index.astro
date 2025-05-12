@@ -22,14 +22,16 @@ const posts = (await getCollection("blog")).sort(
       <section>
         <ul class="space-y-1">
           {
-            posts.map((post) => (
-              <li class="hover:underline flex align-baseline">
-                <a href={`/blog/${post.id}/`}>
-                  <FormattedDate date={post.data.pubDate} />
-                  <span>{post.data.title}</span>
-                </a>
-              </li>
-            ))
+            posts
+              .filter((post) => post.data.published)
+              .map((post) => (
+                <li class="hover:underline flex align-baseline">
+                  <a href={`/blog/${post.id}/`}>
+                    <FormattedDate date={post.data.pubDate} />
+                    <span>{post.data.title}</span>
+                  </a>
+                </li>
+              ))
           }
         </ul>
       </section>
