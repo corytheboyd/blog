@@ -19,4 +19,4 @@ This is what you deserve. This is what I deserve.
 Let us synchronize our depression into a double helix of shareholder value, rocketing toward the sun. If we're lucky, we'll burn up and die. If we're not lucky, we will put our pants back on and try harder again next Fiscal Year.
 
 Your brother in business,
-Cory.
+Cory
